@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reservez votre photographes Fisheye">
+    <title>Nos photographes</title>
+    <link rel="shortcut icon" href="./sources/logo/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+    <!-- loader -->
+    <div class=" loader-container">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- contact Modale -->
+
+    <section class="dialog" role="dialog" aria-labelledby="title">
+        <div class="dialog-windows">
+            <div class="modal-header">
+                <h1 class="modal-title" id="title">Title</h1>
+                <button title="fermer la modale" class="close-btn"><em class="modal-close fas fa-times"></em></button>
+            </div>
+            <form class="modal-form" id="contact">
+                <label for="prenom">Prénom</label>
+                <input class="firstName-inp" id="prenom" type="text" name="first-Name" aria-label="Entrez votre prenom"
+                    aria-required="true" />
+                <span class="message-alert">Vous devez entrer votre prénom !</span>
+                <label for="nom">Nom</label>
+                <input class="lastName-inp" id="nom" type="text" name="last-Name" aria-label="Entrez votre nom"
+                    aria-required="true" />
+                <span class=" message-alert">Vous devez entrer votre nom !</span>
+                <label for="email">Email<br /></label>
+                <input class="email-inp" id="email" type="email" name="email" aria-label="entrez votre mail"
+                    aria-required="true" />
+                <span class="message-alert">Vous devez entrer un Email valide !
+                </span>
+                <label for="msg">Votre Message<br /></label>
+                <textarea class="msg-inp" id="msg" name="message" aria-required="true"></textarea>
+                <span class="message-alert">Votre devez entrer un message ! </span>
+                <button class="submit-form" type="submit" value="Envoyer" name="Email" aria-label="Envoyer le message">
+                    Envoyer
+                </button>
+            </form>
+        </div>
+        <div class="dialog-mask"></div>
+    </section>
+
+    <!-- lightbox modal -->
+    <section class="lightbox" role="dialog" aria-label="lightbox modal">
+        <div class="lightbox-windows">
+            <ul class="container-slides"></ul>
+            <div class="commandes">
+                <button class="left" aria-label="media precedent">
+                    <em class="fas fa-chevron-left"></em>
+                </button>
+                <button class="right" aria-label="media suivant">
+                    <em class="fas fa-chevron-right"></em>
+                </button>
+                <button class="close" aria-label="Fermer Le carrousel">
+                    <em class="fas fa-times close-lightbox-media"></em>
+                </button>
+
+                <h2 class="titre-media-lightbox">Ici le titre du média</h2>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- header -->
+    <header>
+        <div class="header-top">
+            <a href="./index.html" class="logo" title="retour a la page d'accueil" id="retour">
+                <img src="./sources/logo/logo.svg" alt="Logo fisheye" aria-labelledby="retour" />
+            </a>
+
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="main" aria-hidden="false">
+
+        <!-- Banner photographe -->
+        <div class="banner" role="banner"></div>
+
+        <!--  Dropdown Menu -->
+        <section class="filter">
+            <h3 id="trierPar">Trier par </h3>
+            <div class="dropdownMenu">
+                <div class="filter-select">
+                    <a href="#" role="button" class="filter-select__trigger" aria-controls="filter-options"
+                        aria-haspopup="listbox" aria-label="Trier par">
+                        <span>Popularité</span>
+                        <div class="arrow"></div>
+                    </a>
+                    <div class="filter-options-container" role="listbox" id="filter-options">
+                        <a href="#" class="filter-option selected" data-value="popularite" aria-selected="true"
+                            aria-label="Trier par popularité" role="option">Popularité</a>
+                        <a href="#" class="filter-option" data-value="date" aria-selected="false"
+                            aria-label="Trier par date" role="option">Date</a>
+                        <a href="#" class="filter-option" data-value="titre" aria-selected="false"
+                            aria-label="Trier par titre" role="option">Titre</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Cards media container  -->
+        <div class="cards-media-container"></div>
+        <button class="btn-modal-mobile contact-btn">Contacter-moi
+            <span class="sr-only">Ouvrir le formulaire de contact</span>
+        </button>
+    </main>
+
+
+    <script src="./scripts/pages/photographer_pages.js" type="module"></script>
+</body>
+
+</html>
