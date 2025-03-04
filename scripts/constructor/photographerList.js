@@ -29,7 +29,7 @@ export class PhotographerList {
   }
 
   /**
-   * @property {function} getPhotographerList  retourne un nouveaux tableau  avec les photographes triés selon le tag selectionner par l'uttilisateur
+   * @property {function} getPhotographerList  retourne un nouveau tableau avec les photographes triés selon le tag selectionner par l'uttilisateur
    }}
    * @param  {...tags} tags 
    * @returns {Array}

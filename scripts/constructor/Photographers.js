@@ -4,7 +4,7 @@
  */
 
 /**
- * Class pour créer un nouveaux photographe
+ * Class pour créer un nouveau photographe
  */
 /**
  * Détails concernant le photographe

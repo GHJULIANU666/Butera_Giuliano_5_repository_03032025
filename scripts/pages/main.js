@@ -15,7 +15,7 @@ const photographerList = new PhotographerList();
 /**
  * name linkToData
  * @type {string}
- * @description le liens vers les données Json Fisheye
+ * @description le lien vers les données Json Fisheye
  *
  */
 

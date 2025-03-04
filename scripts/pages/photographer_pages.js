@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 });
 // création des données a afficher sur la page
 function createData(data) {
-  // créer un objet photographe si l'id est egale a l'id de l'adresse
+  // créer un objet photographe si l'id est égale à l'id de l'adresse
   data.photographers.forEach((photographer) => {
     if (photographer.id === Number(urlParams.get("id"))) {
       currentPhotographer = new Photographers(
@@ -100,11 +100,7 @@ export function displayMediaList() {
     const cardsMediaFooter = document.createElement("div");
     const cardsMediaTitle = document.createElement("p");
     const cardsMediaHeaderLike = document.createElement("div");
-    const lightboxLink = document.querySelectorAll(".cards-media-img");
-
-    lightboxLink.forEach((link) => {
-      link.addEventListener("click", openLightbox);
-    });
+    
     const cardsMediaCompteurLike = document.createElement("p");
     const heartLink = document.createElement("button");
     const heart = document.createElement("i");
@@ -177,6 +173,11 @@ export function displayMediaList() {
       }
     });
   });
+  const lightboxLink = document.querySelectorAll(".cards-media-img");
+
+    lightboxLink.forEach((link) => {
+      link.addEventListener("click", openLightbox);
+    });
 }
 
 function displayPage() {
